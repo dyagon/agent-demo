@@ -2,15 +2,8 @@
 Demo 01: LangChain + 通义千问 (Qwen) 简单链式调用
 - 使用 LCEL 构建 Prompt -> LLM -> OutputParser 链
 - 支持流式输出（可选）
+- 环境变量（如 DASHSCOPE_API_KEY）由 uv 等运行时注入
 """
-from pathlib import Path
-from dotenv import load_dotenv
-
-# 保证从项目根目录加载 .env（无论从何处执行）
-# 路径: 项目根/langchain/01-simple/main.py -> parents[2] = 项目根
-root = Path(__file__).resolve().parents[2]
-load_dotenv(root / ".env")
-
 from langchain_community.chat_models import ChatTongyi
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser

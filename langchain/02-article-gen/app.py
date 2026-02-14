@@ -1,13 +1,8 @@
 """
 Demo 02: Streamlit + LangChain 文章生成工具
 - 输入 topic → 生成文章标题 → 根据标题生成文章正文
+- 环境变量由 uv 等运行时注入
 """
-from pathlib import Path
-from dotenv import load_dotenv
-
-root = Path(__file__).resolve().parents[2]
-load_dotenv(root / ".env")
-
 import streamlit as st
 from langchain_community.chat_models import ChatTongyi
 from langchain_core.prompts import ChatPromptTemplate

@@ -9,8 +9,11 @@ agent-demo 入口：列出所有 demo 及运行方式。
 """
 from pathlib import Path
 
-# 按主题组织的 demo 根目录（可扩展，如 langgraph、openai 等）
-DEMO_ROOTS = [Path(__file__).resolve().parent / "langchain"]
+# 按主题组织的 demo 根目录（可扩展，如 openai 等）
+DEMO_ROOTS = [
+    Path(__file__).resolve().parent / "langchain",
+    Path(__file__).resolve().parent / "langgraph",
+]
 
 
 def main():
