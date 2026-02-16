@@ -38,7 +38,7 @@ def load_md_docs(dir_path: Path) -> list[Document]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="为 05-retriever 的 PGVector 集合灌数")
+    parser = argparse.ArgumentParser(description="为 PGVector 集合灌数")
     parser.add_argument("docs_dir", type=Path, help="Markdown 文档目录")
     args = parser.parse_args()
     docs_dir = args.docs_dir.resolve()
