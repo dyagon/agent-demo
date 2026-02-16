@@ -11,3 +11,6 @@ wheels/
 .env
 
 dev/db
+
+# 多向量 QA 生成的 docstore（可重建）
+langgraph/03-qa-multivector/docstore.json
