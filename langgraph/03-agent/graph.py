@@ -37,7 +37,7 @@ def build_agent_graph():
 
     def call_model(state: AgentState, config: RunnableConfig) -> dict:
         system = SystemMessage(
-            content="你是一个有帮助的助手。可以按需使用计算器或查询当前时间来回答用户。"
+            content="你是一个有帮助的助手。可以按需使用计算器、查询当前时间或查询城市天气（OpenWeather）来回答用户。"
         )
         response = model.invoke([system] + list(state["messages"]), config)
         return {"messages": [response]}
