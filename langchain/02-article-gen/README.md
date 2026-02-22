@@ -2,7 +2,7 @@
 
 Streamlit + LangChain 文章生成工具：输入主题 → 生成文章标题 → 根据标题生成正文。
 
-- 使用通义千问 (Qwen)，需在项目根目录 `.env` 中配置 `DASHSCOPE_API_KEY`
+- 使用通义千问 (Qwen)，`DASHSCOPE_API_KEY` 由 uv 或运行环境注入
 
 ## 运行
 

@@ -15,4 +15,7 @@ dependencies = [
     "watchdog>=6.0.0",
     "rank_bm25>=0.2.2",
     "langsmith>=0.1.0",
+    "langserve[all]>=0.1.0",
+    "chainlit>=1.0.0",
+    "langchain-deepseek>=1.0.0",
 ]

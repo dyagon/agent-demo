@@ -8,7 +8,7 @@
 
 ## 依赖
 
-- 数据：与 04-vector / 03-embedding 共用表，先执行 `init_db.py` 与 `build_db.py <文档目录>`。
+- 数据：与 [04-vector](../../04-vector/) 共用表，先执行 `init_db.py` 与 `build_db.py <文档目录>`。
 - Python 包：`rank_bm25`（BM25Retriever 依赖）。若未安装：
   ```bash
   uv add rank_bm25
