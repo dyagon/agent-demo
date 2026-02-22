@@ -24,5 +24,21 @@ def create_chain():
     return prompt | llm | StrOutputParser()
 
 
+def create_chain_with_thinking():
+    """返回 prompt | llm，不接 StrOutputParser，便于流式拿到 AIMessageChunk.reasoning_content。"""
+    llm = ChatDeepSeek(
+        model="deepseek-reasoner",
+        temperature=0,
+        max_tokens=None,
+    )
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", SYSTEM_PROMPT),
+        ("user", USER_PROMPT),
+    ])
+    return prompt | llm
+
+
 # 供 LangServe add_routes 使用的可调用链（输入: {"input": str}）
 chain = create_chain()
+# 供 stream_events 展示思考过程（输出 AIMessage，含 additional_kwargs.reasoning_content）
+chain_with_thinking = create_chain_with_thinking()
