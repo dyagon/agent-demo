@@ -19,3 +19,7 @@ dependencies = [
     "chainlit>=1.0.0",
     "langchain-deepseek>=1.0.0",
 ]
+
+
+[tool.uv]
+index-url = "https://pypi.tuna.tsinghua.edu.cn/simple" 

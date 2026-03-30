@@ -16,3 +16,5 @@ dev/db
 langgraph/03-qa-multivector/docstore.json
 
 .chainlit/
+
+outputs/
